@@ -14,13 +14,11 @@ os.mkdir(sorted_files)
 
 for fls in os.listdir(files):
     source = files + fls
-    month_checker = datetime.datetime.fromtimestamp(os.path.getmtime(source)).month
-    year_checker = datetime.datetime.fromtimestamp(os.path.getmtime(source)).year
-    destination = sorted_files + f"/{month_checker}.{year_checker}_Fuji/"
+    check = datetime.datetime.fromtimestamp(os.path.getmtime(source))
+    destination = sorted_files + f"/{check.month}.{check.year}_Fuji/"
     try:
         os.mkdir(destination)
     except FileExistsError:
         pass
     
     shutil.move(source, destination)
-    
