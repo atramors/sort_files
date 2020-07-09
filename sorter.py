@@ -2,20 +2,25 @@ import os
 import shutil
 import datetime
 
-# Folder with photos
+# Create folder for sorted files.
 
-photos = "/Users/atramors/Desktop/photos/"
+files = "/Users/atramors/Desktop/unsorted/"
+sorted_files = "/Users/atramors/Desktop/sorted_photos"
+os.mkdir(sorted_files)
 
-# Create folders named like months
 
-for i in range(1, 13):
-    os.mkdir(f"/Users/atramors/Desktop/sorted_photos/{str(i)}.2020_Fuji/")
+# Loop for month, year creation check.
+# Create folders named like months and moving files there.
 
-# Loop for month creation check and moving files
-
-for fls in os.listdir(photos):
-    source = "/Users/atramors/Desktop/photos" + "/" + fls
+for fls in os.listdir(files):
+    source = files + fls
     month_checker = datetime.datetime.fromtimestamp(os.path.getmtime(source)).month
-    destination = f"/Users/atramors/Desktop/sorted_photos/{month_checker}.2020_Fuji"
-
+    year_checker = datetime.datetime.fromtimestamp(os.path.getmtime(source)).year
+    destination = sorted_files + f"/{month_checker}.{year_checker}_Fuji/"
+    try:
+        os.mkdir(destination)
+    except FileExistsError:
+        pass
+    
     shutil.move(source, destination)
+    
