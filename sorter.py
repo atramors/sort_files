@@ -1,4 +1,4 @@
-# !/bin/python3
+#!/usr/bin/python3
 
 import os
 import shutil
@@ -10,9 +10,10 @@ unsorted_files = os.path.join(os.path.join(os.path.expanduser('~')),
                               'Desktop/unsorted/')
 sorted_files = os.path.join(os.path.join(os.path.expanduser('~')),
                             'Desktop/sorted_photos/')
-
-os.mkdir(sorted_files)
-
+try:
+    os.mkdir(sorted_files)
+except FileExistsError:
+    pass
 
 # Loop for month, year creation check.
 # Create folders named like months and moving files there.
