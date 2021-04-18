@@ -9,7 +9,7 @@ This script is just create folders according to months and years of files creati
 
    **python3 sorter.py --help** 
    
-3. Just chose your names for folders 
+3. Just chose your names for folders (notice the structure of names in help option)
 
 **--unsorted_folder**
 
