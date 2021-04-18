@@ -1,3 +1,4 @@
+### Prehistory
 One of my hobbies - photography, but it was such a pain to sort photos after my sd-card was filled (actually 2 cards with 64Gb). So I decide to automate boring process of sorting photos (actually any files can be sorted and stored to folders by month and year in just a second) and wrote this small cli program to sort files.
 
 This script is just create folders according to months and years of files creation and then sort and move there files from source directory.
