@@ -1,4 +1,4 @@
-One of my hobbies - photography, but it was such a pain to sort photos after my sd-card was filled (actually 2 cards with 64Gb). So I decide to automate boring process of sorting photos (actually any files can be sorted in a second) and wrote this small cli program to sort files.
+One of my hobbies - photography, but it was such a pain to sort photos after my sd-card was filled (actually 2 cards with 64Gb). So I decide to automate boring process of sorting photos (actually any files can be sorted and stored to folders by month and year in just a second) and wrote this small cli program to sort files.
 
 This script is just create folders according to months and years of files creation and then sort and move there files from source directory.
 
@@ -9,12 +9,15 @@ This script is just create folders according to months and years of files creati
 
    **python3 sorter.py --help** 
    
-3. Just chose your names for folders (notice the structure of names in help option)
+3. Just chose your names for folders  (notice the structure of names in help option)
 
 **--unsorted_folder**
 
 **--sorted_folder**
 
 **--filename**
+4. Now you can write:
+
+**python3 sorter.py --unsorted_folder=... --sorted_folder=... --filename=...** 
 
 ... and voila - you have folder containing folders with sorted files. 
