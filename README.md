@@ -12,7 +12,9 @@ This script is just create folders according to months and years of files creati
 3. Just chose your names for folders 
 
 **--unsorted_folder**
+
 **--sorted_folder**
+
 **--filename**
 
 ... and voila - you have folder containing folders with sorted files. 
