@@ -16,7 +16,7 @@ import click
 @click.option('--filename', default="_Fuji/",
               help='Name of the folder with sorted files - by default:\
                     "_Fuji/"')
-def sort_files(unsorted_folder, sorted_folder, filename):
+def sort_files(unsorted_folder: str, sorted_folder: str, filename: str):
     """Function to sort files"""
 
     # Here you can put all files need to be sorted
