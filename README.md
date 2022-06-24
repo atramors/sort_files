@@ -17,6 +17,7 @@ This script is just create folders according to months and years of files creati
 **--sorted_folder**
 
 **--filename**
+
 4. Now you can write:
 
 **python3 sorter.py --unsorted_folder=... --sorted_folder=... --filename=...** 
